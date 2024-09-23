@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // header part
+
+      var header = document.createElement("header");
+      header.style.background = "white";
+      header.style.position = "fixed";
+      header.style.top = "0px";
+      header.style.width = "100%";
+      header.style.height = "40px";
+      header.style.display = "flex";
+      header.style.justifyContent = "space-between";
+      header.style.alignItems = "center";
+
+      var logo = document.createElement("span");
+      logo.innerHTML = "<b>BR  </b>Architects";
+      logo.style.padding = "40px";
+      var list = document.createElement("ul");
+      list.style.display = "flex";
+      list.style.marginRight = "40px";
+      var listitem1 = document.createElement("li");
+      listitem1.innerHTML = "projects";
+      var listitem2 = document.createElement("li");
+      listitem2.innerHTML = "About";
+      list.style.gap = "20px";
+
+      var listitem3 = document.createElement("li");
+      listitem3.innerHTML = "Contact";
+
+      list.appendChild(listitem1);
+      list.appendChild(listitem2);
+      list.appendChild(listitem3);
+
+      header.appendChild(logo);
+      header.appendChild(list);
+      document.body.appendChild(header);
+      //   console.log(header);
+      //   console.log(logo);
+      //   console.log(list);
+
+      //header part over
+
+      //main img part
+
+      var mainimg = document.createElement("div");
+      mainimg.style.background =
+        "url('https://www.w3schools.com/w3images/architect.jpg')";
+      mainimg.style.height = "100vh";
+      mainimg.style.width = "100%";
+      mainimg.style.backgroundRepeat = "no-repeat";
+      mainimg.style.backgroundSize = "cover";
+      mainimg.style.backgroundPosition = "center";
+      mainimg.style.display = "flex";
+      mainimg.style.justifyContent = "center";
+      mainimg.style.alignItems = "center";
+
+      var mainimgchild = document.createElement("div");
+      mainimgchild.innerHTML = "<b>BR </b>Architects";
+      mainimgchild.style.background = "rgba(0, 0, 0,0.5)";
+      // mainimgchild.style.width="10%"
+      // mainimgchild.style.height="10%"
+      mainimgchild.style.color = "white";
+      mainimgchild.style.fontSize = "3em";
+      mainimgchild.style.textAlign = "center";
+
+      document.body.appendChild(mainimg);
+      mainimg.appendChild(mainimgchild);
+      // console.log(mainimg);
+
+      //main part ended
+
+      //project section
+
+      var project = document.createElement("p");
+      project.innerHTML = "<b>PROJECTS</b>";
+      project.style.margin = "3% 3%";
+      project.style.fontSize = "1.5em";
+
+      document.body.appendChild(project);
+      // console.log(project)
+
+      var mainsection = document.createElement("section");
+      mainsection.style.height = "70vh";
+      mainsection.style.margin = "0% 2%";
+      mainsection.style.display = "grid";
+      mainsection.style.gridTemplateColumns = "auto auto auto auto";
+      mainsection.style.gap = "20px";
+
+      var arr = [
+        "Summer House",
+        "Brick House",
+        "Renovated",
+        "Barn House",
+        "Summer House",
+        "Brick House",
+        "Renovated",
+        "Barn House",
+      ];
+      var arrimg = [
+        "https://www.w3schools.com/w3images/house5.jpg",
+        "https://www.w3schools.com/w3images/house2.jpg",
+        "https://www.w3schools.com/w3images/house3.jpg",
+        "https://www.w3schools.com/w3images/house4.jpg",
+        "https://www.w3schools.com/w3images/house2.jpg",
+        "https://www.w3schools.com/w3images/house5.jpg",
+        "https://www.w3schools.com/w3images/house4.jpg",
+        "https://www.w3schools.com/w3images/house3.jpg",
+      ];
+      for (var i = 0; i <= 7; i++) {
+        var sectionchild = document.createElement("div");
+        sectionchild.style.backgroundImage = `url(${arrimg[i]})`;
+        //   sectionchild.style.height="300px"
+        sectionchild.style.width = "auto";
+        sectionchild.style.backgroundRepeat = "no-repeat";
+        sectionchild.style.backgroundSize = "cover";
+        sectionchild.style.backgroundPosition = "center";
+
+        var sectionchild2 = document.createElement("div");
+        sectionchild2.innerHTML = arr[i];
+        sectionchild2.style.background = "black";
+        sectionchild2.style.color = "white";
+        sectionchild2.style.width = "100px";
+
+        sectionchild.appendChild(sectionchild2);
+        mainsection.appendChild(sectionchild);
+        document.body.appendChild(mainsection);
+
+        // console.log(mainsection)
+        // console.log(sectionchild)
+      }
+
+      //project section ended
+
+      //about section
+      var project = document.createElement("p");
+      project.innerHTML = "<b>About</b>";
+      project.style.margin = "2% 3%";
+      project.style.fontSize = "1.5em";
+
+      document.body.appendChild(project);
+      var about = document.createElement("p");
+      about.innerHTML =
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci vitae placeat molestiae expedita ipsum, dolor sit amet consectetur adipisicing elit. Adipisci vitae placeat molestiae expedita ipsum, dolor sit amet consectetur adipisicing elit. Adipisci vitae placeat molestiae expedita ipsum, dolor sit amet consectetur adipisicing elit. Adipisci vitae placeat molestiae expedita illo quo, nulla repudiandae fuga mollitia reiciendis, obcaecati maxime? Nam, saepe ducimus tempore delectus exercitationem eum natus.";
+      about.style.margin = "0% 2%";
+      document.body.appendChild(about);
+      //about section ended
+
+      //developers information
+      var infoo = document.createElement("article");
+      infoo.style.display = "grid";
+      infoo.style.gridTemplateColumns = "auto auto auto auto";
+      infoo.style.gap = "20px";
+      infoo.style.margin = "2% 2%";
+
+      document.body.appendChild(infoo);
+
+      console.log(infoo);
+      var infoimgs = [
+        "https://www.w3schools.com/w3images/team2.jpg",
+        "https://www.w3schools.com/w3images/team1.jpg",
+        "https://www.w3schools.com/w3images/team3.jpg",
+        "https://www.w3schools.com/w3images/team4.jpg",
+      ];
+      for (i = 0; i <= 3; i++) {
+        var info = document.createElement("section");
+        info.style.height = "50vh";
+        // info.style.width="20vw"
+        // info.style.background="red"
+        info.style.display = "flex";
+        info.style.flexDirection = "column";
+        info.style.rowGap = "10px";
+
+        var infoimg = document.createElement("div");
+        infoimg.style.backgroundImage = `url(${infoimgs[i]})`;
+        infoimg.style.height = "20vh";
+        infoimg.style.width = "auto";
+        infoimg.style.backgroundRepeat = "no-repeat";
+        infoimg.style.backgroundSize = "cover";
+        infoimg.style.backgroundPosition = "center";
+        var names = document.createElement("p");
+        names.innerHTML = "josh Don";
+        var work = document.createElement("p");
+        work.innerHTML = "CEO";
+        var dis = document.createElement("p");
+        dis.innerHTML =
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem totam, cum ducimus nulla rerum nam sunt nisi porro recusandae, quasi dignissimos dolores quo? Quas quaerat voluptate possimus nam, dicta officiis.";
+        infoo.appendChild(info);
+        info.appendChild(infoimg);
+        info.appendChild(names);
+        info.appendChild(work);
+        info.appendChild(dis);
+
+        //  document.body.appendChild(info)
+      }
+
+      console.log(info);
+    </script>
+  </body>
+</html>
